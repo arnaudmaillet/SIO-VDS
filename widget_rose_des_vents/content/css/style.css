@@ -1,0 +1,515 @@
+/*Global css*/
+
+* {
+    margin : 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    border-radius: 5px;
+    height       : 0;
+    width        : 0;
+    overflow: hidden;
+    border: 3px solid #0553b2;
+}
+
+header {
+    background: #0553b2;
+    padding   : 15px 15px;
+    display   : block;
+    width     : 100%
+}
+
+.title-name {
+    display  : block;
+    width    : 100%;
+    color    : #ffffff;
+    font-size: 23px;
+    position : relative
+}
+
+.ref-btn {
+    display: flex;
+    position: absolute;
+    right   : 15px;
+    top     : 2px;
+}
+
+#refreshDone{
+    margin-right: 1rem;
+    transition: all 0.5s ease-in-out;
+}
+
+.ref-btn img {
+    cursor: pointer;
+    height: 24px;
+    width: 24px;
+    margin: auto;
+}
+
+.ref-btn img:hover {
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+.statioin {
+    display:flex; 
+    justify-content: center;
+    background : #f0f0f0;
+    width      : 100%;
+    padding    : 15px 15px;
+    font-size  : 23px;
+    font-family: 'poppinslight';
+}
+
+.statioin span {
+    font-family: 'poppinsregular';
+}
+
+#stationName, .longitude, .latitude{
+    margin: 0 0.4em 0 0.4em;
+}
+
+.web-section {
+    display  : flex;
+    /* flex-wrap: wrap; */
+    background-color: white;
+}
+
+.flex-block {
+    flex     : 0 0 50%;
+}
+
+.order-1 {
+    display: flex;
+    flex-direction: column;
+    /* padding  : 30px 0 50px 0; */
+}
+
+.order-2 {
+    /* padding  : 30px 0; */
+}
+
+.vitesses{
+    display: flex;
+    height: 0;
+    width: 0;
+}
+
+#lblVent{
+    line-height: 15px;
+    vertical-align: bottom;
+    margin: auto;
+}
+
+#lblRafales{
+    line-height: 15px;
+    vertical-align: bottom;
+    margin: auto;
+}
+
+.vent-sec,
+.refales-sec {
+    margin: auto;
+    display:flex;
+    justify-content: center; 
+    font-size     : 0px;
+    width         : auto;
+    color         : #0055b2;
+    font-family   : 'poppinslight';
+    background    : #ffffff;
+}
+
+.divVent{
+    display: flex;
+    justify-content: center;
+    width: 375px;
+}
+
+.divRafales{
+    display: flex;
+    justify-content: center;
+    width: 375px;
+}
+
+.vent-sec strong,
+.refales-sec strong {
+    width       : auto;
+    /* line-height : 60px; */
+    padding-right: 0.4em;
+    text-transform: uppercase;
+}
+
+
+.vent-sec .abc,
+.refales-sec .abc {
+    display:flex; 
+    justify-content: center;
+    width         : auto;
+    line-height: 50px;
+}
+
+.vent-sec .abc>span,
+.refales-sec .abc>span {
+    font-size  : 90px;
+    font-weight: bold
+}
+
+.refales-sec {
+    margin-top: 10%;
+}
+
+
+#vent{
+    font-size:0em; 
+    font-weight:bold;
+}
+
+#ventDec{
+    transform:translateY(12px)
+}
+
+#convertVent{
+    color:#666666; 
+    transform:translateY(12px); 
+    margin-left:5px
+}
+
+#rafales{
+    font-size:0em; 
+    font-weight:bold;
+}
+
+#rafalesDec{
+    transform:translateY(12px)
+}
+
+#convertRafales{
+    transform:translateY(12px); color:#666666; margin-left:5px
+}
+
+.btnUnits{
+    height: 20px;
+    padding: 0 5px 0 5px;
+    margin: auto;
+}
+
+.meter-cicle {
+    text-align: center;
+    padding   : 25px;
+    position  : relative
+}
+
+.dernier {
+    text-align : center;
+    display    : block;
+    padding-top: 0;
+    line-height: 33px;
+    font-size  : 18px;
+    color      : #666666
+}
+
+.dernier em {
+    text-transform: uppercase;
+    font-style    : normal;
+    color         : #666666;
+}
+
+.needle {
+    position  : absolute;
+    text-align: center;
+    top       : 50%;
+    left      : 50%;
+    transform : translateX(-50%)translateY(-50%);
+}
+
+.needle img {
+    transform: rotate(0deg);
+    width    : 70%;
+}
+
+.circle-img {
+    position  : relative;
+    display   : block;
+    margin    : auto;
+    text-align: center
+}
+
+.imgBorderBottom:after{
+    content: "";
+    background: #0553b2;
+    position: absolute;
+    bottom: 0;
+    left: 17.5%;
+    height: 3px;
+    width: 65%;
+}
+
+.m-cir img {
+    width: 70%;
+}
+
+.gray-circle-number {
+    display:flex; 
+    justify-content: center;
+    width     : 100%;
+    text-align: center;
+    color     : #ffffff;
+    font-size  : 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    position   : absolute;
+    top        : 50%;
+    left       : 50%;
+    transform  : translateX(-45%) translateY(-60%);
+    width      : auto;
+}
+
+#rel{
+    display:flex; 
+    justify-content: center;
+}
+
+#dernierRel{
+    margin: 0 0.1em 0 0.2em;
+}
+
+#divTemperature{
+    display: flex;
+    justify-content: center;
+}
+
+#temperature, #horaire{
+    margin: 0 0 0 0.2em;
+}
+
+
+.radio-btn {
+    display:flex; 
+    justify-content: space-evenly;
+    margin-top: 10%;
+    width     : 100%;
+    transform: translateY(-1em);
+    z-index: 2;
+}
+
+.radio_box {
+    display       : flex;
+    justify-content: center;
+    font-size: 1.6em; 
+}
+
+
+input[type=radio] {
+    margin: auto;
+    transform: scale(2.2);
+}
+
+.radio_box label{
+    margin-left: 1rem;
+}
+
+
+
+.cordinate-metero {
+    font-size: 0px;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    border-top : solid 1px #e4e4e4;
+    width      : 100%;
+    color      : #666666;
+    background : #eeeeee;
+    padding: 1rem 0 1rem 0;
+}
+
+
+.gray-circle-number i {
+    font-size: 15px
+}
+
+.cordinate-metero span {
+    padding-top: 8px
+}
+
+
+.cordinate-metero ul li {
+    display: flex;
+    float     : left;
+    padding   : 0 10px;
+    list-style: none;
+    position  : relative
+}
+
+.cordinate-metero ul li:after {
+    content   : "";
+    position  : absolute;
+    background: #999;
+    width     : 1px;
+    height    : 20px;
+    right     : 0;
+    top       : 30%;
+}
+
+
+.cordinate-metero ul li:last-child:after {
+    background: none
+}
+
+.cordinate-metero a {
+    color: #666666
+}
+
+
+
+
+/* @media only screen and (max-width:980px) {
+  .flex-block {
+        flex     : 0 0 100%;
+        max-width: 100%
+    }
+
+    .order-1 {
+        order : 1;
+    }
+
+    .order-2 {
+        margin-top: 1em;
+        order : 2;
+    }
+
+    .m-cir img {
+        width: 50%;
+    }
+
+    .needle img {
+        width    : 50%!important;
+    }
+
+    .flex-block {
+        padding: 11px 0
+    }
+
+    .units {
+        font-size: 12px
+    }
+
+    .vent-sec,
+    .refales-sec {
+        font-size: 18px;
+    }
+
+    .divVent{
+        width: auto;  
+    }
+
+    .divRafales{
+        width: auto;
+    }
+
+    .vent-sec .abc>span,
+    .refales-sec .abc>span {
+        font-size: 57px;
+    }
+
+    .vent-sec .abc,
+    .refales-sec .abc {
+        width: auto;
+        line-height: 40px
+    }
+
+    .vent-sec strong,
+    .refales-sec strong {
+        width      : auto;
+        line-height: 50px;
+    }
+
+    .refales-sec {
+        transform: translateY(-1em);
+        padding-bottom: 0px;
+    }
+    
+    .vent-sec{
+        margin-top: 1em;
+    }
+    
+    .vent-sec{
+        margin-top: 1em;
+    }
+
+    .cordinate-metero ul li {
+    font-size: 13px;
+    padding  : 0 8px;
+    }
+
+    .cordinate-metero ul li:after {
+        top       : 0.1rem;
+    }
+    
+}
+
+@media only screen and (max-width:680px) {
+    .flex-block {
+        padding: 10px 0 0 0
+    }
+
+    header {
+        padding-top   : 9px;
+        padding-bottom: 9px
+    }
+
+    .title-name {
+        font-size: 20px;
+    }
+
+    .dernier {
+        font-size  : 16px;
+        padding-top: 0
+    }
+
+    .statioin {
+        font-size     : 16px;
+        padding-top   : 10px;
+        padding-bottom: 10px
+    }
+
+    .radio_box {
+        margin-right: 0;
+    }
+
+    .radio_box > label{
+        font-size: 1.5rem;
+        margin-left: 5px;
+    } 
+
+    input[type=radio] {
+        transform: scale(1.5)!important;
+    }
+
+    .needle img{
+        width: 55%!important;
+    }
+
+    .needle{
+        width: 80px;
+    }
+
+    .gray-circle-number {
+        font-size: 12px!important;
+    }
+
+    .cordinate-metero {
+        display: none;
+    }
+}
+
+@media only screen and (max-width:480px) {
+    .flex-block {
+        padding: 15px 0 0 0
+    }
+} */

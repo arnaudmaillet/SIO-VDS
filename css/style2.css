@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+    margin: 0; padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #02019a;
+    background-color: #306fb3;
+    color: black;
+}
+
+
+/*  Tableau */
+
+tr {
+    line-height: 18px;
+}
+
+thead {
+    border-bottom: 3px solid #ee171f;
+    color : darkblue;
+    font-weight:bold;
+}
+
+/* lien */
+
+a, a:hover, a:visited, a:active
+{
+    text-decoration:none;
+}
+
+/* une page avec un cadre central */
+
+#corps {
+    border-radius: 4px;
+    padding: 20px;
+    margin : 20px;
+    background-color: #FFF;
+    min-height: 650px;
+}
+
+
+.titreCadre {
+
+    font-weight: bold;
+    color: #000;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #D7DBDF;
+    margin-bottom: 0px;
+}
+
+/* les boutons */
+
+a.bouton {
+    display: inline-block;
+    font-weight: bold;
+    background-color: rgb(104, 160, 221);
+    color: white;
+    margin-left : 10px;
+    padding: 3px 10px 2px 10px;
+    transform: skew(-20deg, -5deg);
+    text-align: center;
+    max-height: 30px;
+    cursor: pointer;
+}
+
+a:hover.retour {
+    background-color: #eb073c;
+}
+
+/* Mise en forme du texte */
+
+
+
+.titre {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.cadreDoc{
+    border: 1px dashed ;
+    min-width: 100%;
+    height: 200px;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    padding : 15px;
+    font-style : italic;
+}
+
+.cadreUpload{
+    border: 1px dashed ;
+    height: 180px;
+    width: 160px;
+    text-align: center;
+    padding : 15px;
+    display: inline-block;
+}
+
+/* un menu */
+.menu a {
+    transition: all 1s ease-out;
+}
+
+.menu a:hover {
+    transform: scale(1.05);
+    border-radius: 10px;
+}
+
+/* mise en forme d'un compte à rebours */
+#horloge{
+    font-family: sans-serif;
+    display: inline-block;
+    font-weight: 100;
+    text-align: center;
+    font-size: 20px;
+}
+
+#horloge > div{
+    padding: 5px;
+    border-radius: 3px;
+    background: #0f3f8c;
+    display: inline-block;
+    min-width: 80px;
+}
+
+#horloge div > span{
+    color: #fff;
+    padding: 5px;
+    border-radius: 3px;
+    background: #ee171f;
+    display: inline-block;
+}
+
+
+/* ck editor */
+.ck-editor__editable {
+    min-height: 200px;
+    max-height: 400px;
+}
+
+/* fixer certains paramètres en fonction de la taille de l'écran
+Extra small <576px	Small ≥576px	 Medium ≥768px Large ≥992px	 Extra large ≥1200px
+*/
+
+/* pour une taille inférieure à 576 px */
+@media (max-width: 576px) {
+    .masquer {
+        display : none;
+    }
+    html  {font-size: 10px; }
+}
+
+/* à partir de 576 px */
+@media (min-width: 576px) {
+    html  {font-size: 11px; }
+}
+
+/* à partir de 768 px  */
+@media (min-width: 768px) {
+    html  {font-size: 12px; }
+}
+
+/* à partir de 992 px  */
+@media (min-width: 992px) {
+    html  {font-size: 13px; }
+}
+
+/* à partir de 1200 px */
+@media (min-width: 1200px) {
+    html  {font-size: 14px; }
+}
+
+/* à partir de 1600 px  */
+@media (min-width: 1600px) {
+    html  {font-size: 16px; }
+}
